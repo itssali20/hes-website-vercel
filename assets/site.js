@@ -178,6 +178,17 @@
   })();
 
   /* ---------------- share (copy link) ---------------- */
+  /* share links: filled with this page's own address */
+  $$('[data-share]').forEach(function(a){
+    a.href = a.getAttribute('data-share').replace('{u}', encodeURIComponent(location.href)).replace('{t}', encodeURIComponent(document.title));
+  });
+  /* product gallery: thumbnails swap the main photo */
+  $$('.pd-gthumbs button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var fr = document.querySelector('.pd-frame img'); if(fr) fr.src = b.getAttribute('data-full');
+      $$('.pd-gthumbs button').forEach(function(x){ x.classList.toggle('on', x === b); });
+    });
+  });
   $$('[data-copy]').forEach(function(b){
     b.addEventListener('click', function(){
       var done = function(){ b.setAttribute('title', 'Link copied!'); b.style.background = 'var(--green)'; b.style.color = '#fff'; };
