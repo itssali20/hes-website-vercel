@@ -743,3 +743,17 @@ body.hes-home > footer{float:none;width:auto;clear:both}
 @media (max-width:980px){.ecourse{grid-template-columns:1fr}.ec-body{padding:4px 8px 10px}}
 @media (max-width:460px){.ec-opts{grid-template-columns:1fr}}
 .ec-opt b small{display:block;margin-top:4px;font-size:13px}
+
+/* ===== Articles dropdown (link + hover list of article categories) ===== */
+.dd-split{display:flex;align-items:center}
+.dd-split>.ddbtn{text-decoration:none;font-size:14.5px;font-weight:500;padding-right:2px}
+.ddcaret{background:none;border:0;font:inherit;font-size:12px;line-height:1;color:var(--ink-2);padding:9px 8px 9px 2px;border-radius:8px;cursor:pointer}
+.dd-split:hover .ddcaret,.dd-split.open .ddcaret{color:var(--green-d)}
+.dd-split:hover>.ddbtn,.dd-split.open>.ddbtn{background:var(--sage);color:var(--green-d)}
+.mega.mega-list{display:none;width:290px;padding:8px;grid-template-columns:1fr;gap:0}
+.dd:hover .mega.mega-list,.dd:focus-within .mega.mega-list,.dd.open .mega.mega-list{display:grid}
+.nav .mega-list a{display:block;padding:11px 14px;font-size:15px;font-weight:600;color:var(--ink);border-radius:8px;white-space:normal}
+.nav .mega-list a:hover{background:var(--sage);color:var(--green-d)}
+.nav .mega-list a+a{border-top:1px solid var(--line)}
+.nav .mega-list a.all{color:var(--green);font-weight:700}
+@media (max-width:1080px){.dd-split{flex-wrap:wrap}.dd-split>.ddbtn{flex:1 1 auto}.mega.mega-list{position:static;width:100%;box-shadow:none;border:0;padding:0 0 4px 12px}.dd:hover .mega.mega-list{display:none}.dd.open .mega.mega-list{display:grid}}

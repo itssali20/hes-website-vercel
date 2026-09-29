@@ -167,6 +167,16 @@
     document.addEventListener('click', function(e){ if(!bdd.contains(e.target)){ bdd.classList.remove('open'); bb.setAttribute('aria-expanded','false'); } });
   }
 
+  /* ---------- articles dropdown (caret toggles on touch; hover works via CSS) ---------- */
+  var add = document.getElementById('articlesdd');
+  if(add){
+    var acb = add.querySelector('.ddcaret');
+    acb.addEventListener('click', function(){
+      var o = add.classList.toggle('open'); acb.setAttribute('aria-expanded', o ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e){ if(!add.contains(e.target)){ add.classList.remove('open'); acb.setAttribute('aria-expanded','false'); } });
+  }
+
 
   /* ---------- article filter ---------- */
   var af = document.getElementById('afilter');
