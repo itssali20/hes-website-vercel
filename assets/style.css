@@ -616,7 +616,8 @@ button.lcard{font:inherit;font-weight:700;font-size:16px;background:var(--gold-w
 
 /* ===== NAV: never wrap onto a 2nd line between desktop and burger sizes ===== */
 .nav{flex-wrap:nowrap}
-@media (max-width:1320px){.nav a,.nav .ddbtn{padding:9px 8px;font-size:14px}.bt .n2{letter-spacing:.1em}}
+@media (max-width:1540px){.nav a,.nav .ddbtn{padding:9px 8px;font-size:14px}.bt .n2{letter-spacing:.1em}}
+@media (min-width:1081px){.bt{flex:0 0 auto}.bt .n1,.bt .n2{white-space:nowrap}}
 @media (max-width:1180px) and (min-width:1081px){.bt .n2{display:none}}
 
 /* ===== INFO PAGES (Privacy / Returns / Wholesale) ===== */
