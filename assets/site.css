@@ -554,11 +554,10 @@ a.ccard:hover{transform:translateY(-4px);box-shadow:var(--sh-3)}
 
 /* Collection banner graphic (article category headline) */
 .coll-banner{padding:clamp(18px,2.4vw,30px) 0 6px}
-.coll-banner img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 32%;border-radius:var(--r-lg);box-shadow:var(--sh-2)}
-@media (max-width:700px){.coll-banner img{aspect-ratio:3/2;object-position:center}}
+.coll-banner img{display:block;width:100%;max-width:1040px;margin-inline:auto;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r-lg);box-shadow:var(--sh-2)}
 
 /* Article headline graphic + meta strip */
-.art-banner img{aspect-ratio:16/10;object-position:center 35%}
+.art-banner img{max-width:none;aspect-ratio:16/10;object-position:center 35%}
 @media (max-width:700px){.art-banner img{aspect-ratio:3/2;object-position:center}}
 .art-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
 .art-meta span{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:var(--white);border:1px solid var(--line);border-radius:99px;padding:8px 14px}
