@@ -573,3 +573,5 @@ a.ccard:hover{transform:translateY(-4px);box-shadow:var(--sh-3)}
 .catcard.gfx::after{display:none}
 .catcard.gfx small{display:block;margin:0;padding:12px 18px;color:var(--green-d);font-weight:600;border-top:1px solid var(--line);background:var(--white);transition:background .2s,color .2s}
 .catcard.gfx:hover small{background:var(--green-d);color:#fff}
+.slide .cap .t a{color:inherit;text-decoration:none}
+.slide .cap .t a:hover{color:var(--green);text-decoration:underline}
