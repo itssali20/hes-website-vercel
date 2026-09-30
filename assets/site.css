@@ -551,3 +551,19 @@ a.ccard:hover{transform:translateY(-4px);box-shadow:var(--sh-3)}
 .auth-top cite a,.acard cite a,.tl a{color:inherit;text-decoration:underline;text-decoration-color:var(--green-l);text-underline-offset:2px}
 .auth-top cite a:hover,.acard cite a:hover{color:var(--green)}
 .bookrow-more{text-align:center;margin:26px 0 0;position:relative;z-index:2}
+
+/* Collection banner graphic (article category headline) */
+.coll-banner{padding:clamp(18px,2.4vw,30px) 0 6px}
+.coll-banner img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 32%;border-radius:var(--r-lg);box-shadow:var(--sh-2)}
+@media (max-width:700px){.coll-banner img{aspect-ratio:3/2;object-position:center}}
+
+/* Article headline graphic + meta strip */
+.art-banner img{aspect-ratio:16/10;object-position:center 35%}
+@media (max-width:700px){.art-banner img{aspect-ratio:3/2;object-position:center}}
+.art-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.art-meta span{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);background:var(--white);border:1px solid var(--line);border-radius:99px;padding:8px 14px}
+.art-meta svg{width:14px;height:14px;color:var(--green)}
+
+/* Cards that use an article headline graphic: keep the title visible */
+.acard2 .ph img[src*="assets/img/articles/"]{object-position:center top}
+.acard2 .ph:has(img[src*="assets/img/articles/"]) .kicker{top:auto;bottom:12px}
