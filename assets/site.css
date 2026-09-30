@@ -566,3 +566,10 @@ a.ccard:hover{transform:translateY(-4px);box-shadow:var(--sh-3)}
 /* Cards that use an article headline graphic: keep the title visible */
 .acard2 .ph img[src*="assets/img/articles/"]{object-position:center top}
 .acard2 .ph:has(img[src*="assets/img/articles/"]) .kicker{top:auto;bottom:12px}
+
+/* Category cards that use a headline graphic (title is part of the picture; count sits in a caption strip) */
+.catcard.gfx{display:flex;flex-direction:column;justify-content:flex-start;min-height:0;padding:0;background:var(--white);color:var(--green-d)}
+.catcard.gfx img{position:static;inset:auto;z-index:0;display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.catcard.gfx::after{display:none}
+.catcard.gfx small{display:block;margin:0;padding:12px 18px;color:var(--green-d);font-weight:600;border-top:1px solid var(--line);background:var(--white);transition:background .2s,color .2s}
+.catcard.gfx:hover small{background:var(--green-d);color:#fff}
