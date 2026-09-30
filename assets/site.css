@@ -580,3 +580,14 @@ a.ccard:hover{transform:translateY(-4px);box-shadow:var(--sh-3)}
 .pg-hero .hero-photo:has(img[src*="dana-hero"]){aspect-ratio:4/5;max-width:430px;justify-self:end;width:100%}
 .pg-hero .hero-photo img[src*="dana-hero"]{object-fit:cover;object-position:center top}
 @media (max-width:900px){.pg-hero .hero-photo:has(img[src*="dana-hero"]){justify-self:start;max-width:360px}}
+
+/* Homepage "Read, free, right now": larger thumbnails so the headline graphics are readable */
+.art{grid-template-columns:230px 1fr}
+.art .ph{aspect-ratio:3/2}
+.art .ph:has(img[src*="assets/img/articles/"]) .ph-note{display:none}
+@media (max-width:560px){.art{grid-template-columns:130px 1fr;gap:14px}}
+
+/* Medicines pop-up: big, unmissable "I understand - continue" button (only this one) */
+#m-medicines .linkbtns .btn-gold{flex:1 1 100%;display:flex;align-items:center;justify-content:center;gap:14px;width:100%;padding:26px 30px;font-size:clamp(18px,2.4vw,24px);font-weight:700;line-height:1.25;text-align:center;border-radius:18px;box-shadow:0 14px 30px rgba(178,132,30,.35)}
+#m-medicines .linkbtns .btn-gold em{font-style:normal;font-size:1.3em;transition:transform .2s}
+#m-medicines .linkbtns .btn-gold:hover em{transform:translateX(6px)}
